@@ -9,6 +9,11 @@
     "dev": "nodemon src/main.js",
     "migration:create_address": "node src/infra/database/migrations/create_address.js",
     "migration:create_location": "node src/infra/database/migrations/create_location.js",
+    "migration:create_locator": "node src/infra/database/migrations/create_locator.js",
+    "migration:create_renter": "node src/infra/database/migrations/create_renter.js",
+    "migration:create_contract": "node src/infra/database/migrations/create_contract.js",
+    "migration:create_input": "node src/infra/database/migrations/create_input.js",
+    "migration:create_output": "node src/infra/database/migrations/create_output.js",
     "seed:location": "node src/infra/database/seed/create_initial_location.js"
   },
   "repository": {
