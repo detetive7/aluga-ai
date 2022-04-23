@@ -1,0 +1,5 @@
+- [] Configurar base do projeto     
+    - [x] Configurar Nodemon
+    - [x] Instalar pacotes express e configurar setup inicial
+        - [x] Configurar app inicial
+        - [x] Configurar rotas 
