@@ -1,0 +1,33 @@
+version: "3"
+services:
+  alugaai-db:
+    image: mysql:latest
+    container_name: alugaai-db
+    ports:
+      - 3306:3306
+    volumes:
+      - "./data:/data/db"
+    networks:
+      - alugaai_network
+    environment:
+      MYSQL_ROOT_PASSWORD: app
+      MYSQL_DATABASE: app
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+  alugaai-api:
+    container_name: alugaai-api
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - .:/app
+    env_file:
+      - ./.env
+    ports:
+      - 3333:3333
+    networks:
+      - alugaai_network
+    depends_on:
+      - alugaai-db
+networks:
+  alugaai_network:
